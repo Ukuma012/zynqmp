@@ -25,7 +25,7 @@
 #define XUARTPS_IXR_MASK            0x00003FFFU
 #define XUARTPS_CR_TXRST            0x00000002U    // TX logic reset
 #define XUARTPS_CR_RXRST            0x00000001U    // RX logic reset
-#define XUARTPS_MR_CHMODE_NORM      0x00000000U    // Normal mode
+#define XUARTPS_MR_CHMODE_NORM      0x00000020U    // Normal mode, non parity
 #define XUARTPS_RXWM_RESET_VAL      0x00000020U    // Reset value
 #define XUARTPS_TXWM_RESET_VAL      0x00000020U    // Reset value
 #define XUARTPS_RXTOUT_DISABLE      0x00000000U    // Disable time out
@@ -92,7 +92,7 @@ void SetUpPsUart0(){
 
     //
     // Mode register reset value : All zeroes
-    // Normal mode, even parity, 1 stop bit
+    // Normal mode, non parity, 1 stop bit
     //
     writeReg(PSU_UART0_ADDR + PSU_UART0_MR, XUARTPS_MR_CHMODE_NORM);
 

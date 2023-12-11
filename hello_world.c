@@ -107,19 +107,6 @@ void SetUpPsUart0(){
     // Baud rate generator and dividor reset values
     writeReg(PSU_UART0_ADDR + PSU_UART0_BAUDGEN, XUARTPS_BAUDGEN_RESET_VAL);
     writeReg(PSU_UART0_ADDR + PSU_UART0_BAUDDIV, XUARTPS_BAUDDIV_RESET_VAL);
-
-    //
-    // Control register reset value -
-    // RX and TX are disable by default
-    //
-/*
- * Commenting the below section for time being.
-*/
-/*
-    writeReg(PSU_UART0_ADDR + PSU_UART0_CR,
-    ((uint32_t)XUARTPS_CR_RX_DIS | (uint32_t)XUARTPS_CR_TX_DIS |
-    (uint32_t)XUARTPS_CR_STOPBRK));
-*/
 }
 
 

@@ -2,11 +2,6 @@
 #include <stddef.h>
 #include <stdint.h>
 
-// This is a very basic example that outputs the text "Hello
-// World on Xilinx's QEMU for ZCU102" from the PS UART of the
-// Zynq Ultrascale+ MPSoC. The application will be compiled
-// and placed in the On Chip Memory (OCM)
-
 #define PSU_UART0_ADDR              0xFF000000
 
 #define PSU_UART0_IDR               0x000CU
